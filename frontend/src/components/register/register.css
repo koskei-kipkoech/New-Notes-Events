@@ -1,0 +1,137 @@
+/* General layout styles */
+.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure full screen height */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Light gray background */
+    overflow: hidden; /* Prevent scrolling */
+    flex-direction: row; /* Default to row layout (form next to image) */
+}
+
+.register-container { /* Added a container for better centering */
+    display: flex;
+    width: 100%; /* Occupy the entire screen width */
+    height: 100%; /* Occupy the entire screen height */
+    max-width: 900px; /* Optional: Set a max width to avoid stretching */
+    margin: 0; /* Remove any margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent image from overflowing */
+}
+
+.register-image {
+    flex: 1; /* Takes up 50% of the container */
+    background-color: #f0f0f0; /* Optional: Light gray for image background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the image takes up full height */
+}
+
+.register-image img {
+    width: 100%; /* Ensure the image takes up the full width */
+    height: 100%; /* Ensure the image takes up the full height */
+    object-fit: cover; /* Ensures image covers the area nicely */
+    display: block; /* Prevents a small space below the image */
+}
+
+.register-form {
+    flex: 1; /* Takes up 50% of the container */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 0 8px 8px 0; /* Rounded corners on the right side */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+    text-align: left; /* Align text to the left within the form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Ensure the form takes up full height */
+}
+
+.register-form h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+.register-form input {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.register-form input:focus {
+    border-color: #5c9ded;
+    outline: none;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5c9ded;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #4a8fd3;
+}
+
+.register-form .error-message {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.register-form .login-link {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center; /* Center the login link */
+}
+
+.register-form .login-link a {
+    color: #5c9ded;
+    text-decoration: none;
+}
+
+.register-form .login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .register-page {
+        flex-direction: column; /* Stack image and form vertically */
+    }
+
+    .register-container {
+        flex-direction: column; /* Stack the form and image */
+        height: auto; /* Allow content to adjust naturally */
+    }
+
+    .register-image,
+    .register-form {
+        width: 100%;
+        height: 50%; /* Allow each to take up 50% of the height */
+    }
+
+    .register-image img {
+        object-fit: cover;
+        height: 100%; /* Image takes 50% of the height */
+    }
+
+    .register-form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,171 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar is above other elements */
+}
+
+/* Left Section with Menu Icon & Logo */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+.navbar-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Menu Icon (☰) */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 10px;
+}
+.menu-icon:hover {
+    color: goldenrod;
+    transform: scale(1.05) ease-in-out;
+
+}
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Hidden by default */
+    width:180px;
+    height: 100vh;
+    background-color: #222;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    z-index: 1100; /* Ensures sidebar is above content */
+}
+
+/* Sidebar Open State */
+.sidebar.open {
+    left: 0;
+}
+
+/* Sidebar Links */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar-links li {
+    padding: 10px 0;
+}
+
+.sidebar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 700;
+    display: block;
+    transition: color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.sidebar-links a:hover {
+    color: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Sidebar User Info */
+.sidebar-user {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFD700;
+}
+
+/* Close Button (×) */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: orangered;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Overlay (Gray Background when Sidebar Opens) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1099; /* Below sidebar but above content */
+    display: block;
+}
+
+.navbar-right {
+    margin-left: auto;
+    background-color: #333;
+    padding: 10px; /* Adds spacing for better layout */
+    display: flex; /* Aligns content properly */
+    align-items: center;
+}
+
+/* Styled Link as Button */
+.add-button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 20px;
+    margin-right: 30px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Hover Effect */
+.add-button:hover {
+    background-color: rgb(187, 161, 17); 
+    transform: scale(1.05);
+    color: #222;
+}
+
+/* Removes underline and makes full button clickable */
+.add-button a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 100%;
+    padding: 5px 10px;
+}
+.settings-icon { 
+    font-size: 30px;
+    text-decoration: none;
+
+}
+.settings-icon a{ 
+    font-size: 30px;
+}
+.settings-icon:hover{
+    font-size: 31px;
+}

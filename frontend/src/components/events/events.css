@@ -1,0 +1,213 @@
+/* General container styling */
+.calendar-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 150px;
+    background: rgba(255, 255, 255, 0.538);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: whitesmoke; */
+
+}
+
+/* Title */
+.calendar-container h2 {
+    font-size: 29px;
+    color: gold;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+.calendar-container h2:hover {
+    font-size: 31px;
+
+}
+/* Button Styling */
+.new-event-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.new-event-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    transform: translateY(-4px);
+}
+
+/* Event List */
+.event-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    border: #888;
+    background-color: rgba(245, 245, 245, 0.555);
+
+}
+
+/* Individual Event Item */
+.event-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 2 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+}
+
+.event-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Event Titles */
+.event-title {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.69);
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* Event Descriptions */
+.event-description {
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+    /* padding: 10px; */
+}
+
+/* Event Time */
+.event-time {
+    font-size: 16px;
+    color: gray;
+    margin: 5px ;
+}
+
+.event-time strong {
+    color: #ffcc00;
+    margin-right: 2px;
+}
+
+/* Event Actions */
+.event-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* Icons */
+.edit-icon, .delete-icon {
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.3s ease-in-out;
+}
+
+.edit-icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.delete-icon:hover {
+    color: #dc3545;
+    transform: scale(1.2);
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: orange;
+}
+
+.close:hover {
+    color: #f31414;
+}
+
+/* Form Fields */
+input,
+textarea {
+    width: 95%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+}
+
+/* Submit Button */
+.save-btn {
+    background: linear-gradient(135deg, teal, #218838);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, #218838, #136c34);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .calendar-container {
+        padding: 15px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}

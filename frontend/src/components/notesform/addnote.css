@@ -1,0 +1,136 @@
+/* General Form Styling */
+.note-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 150px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* Input and Textarea Styling */
+.note-form input[type="text"],
+.note-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.note-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Error Styling */
+.input-error {
+    border-color: #ff4d4d !important;
+}
+
+/* Tag Dropdown Styling */
+.tag-dropdown {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.dropdown-btn {
+    width: 80%;
+    padding: 10px;
+    background-color: #507eb0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-item input {
+    margin-right: 10px;
+}
+
+/* Add New Tag Styling */
+.add-tag {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.add-tag input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-tag-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-tag-button:hover {
+    background-color: #218838;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+build/
+*.log
+
+# Python
+*.pyc
+__pycache__/
+venv/
+.env
+
+# Flask
+instance/
+*.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

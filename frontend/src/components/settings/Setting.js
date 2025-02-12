@@ -19,7 +19,7 @@ const Settings = () => {
                 { email, current_password: currentPassword, new_password: newPassword },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
-
+            console.log(response);
             // Show success message
             setMessage("Update successful!");
 

@@ -52,7 +52,7 @@ function Navbar() {
                                 <Link to="/login" onClick={toggleSidebar}>Login</Link>
                             </li>
                             <li>
-                                <Link to="/register" onClick={toggleSidebar}>Register</Link>
+                                <Link to="/" onClick={toggleSidebar}>Register</Link>
                             </li>
                         </>
                     ) : (

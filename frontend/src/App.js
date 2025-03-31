@@ -24,7 +24,7 @@ function MainApp() {
     const { user } = useAuth();
 
     // Hide Navbar on login and register pages
-    const hideNavbarRoutes = ["/login", "/register"];
+    const hideNavbarRoutes = ["/login", "/"];
     const shouldShowNavbar = user && !hideNavbarRoutes.includes(location.pathname);
 
     return (
@@ -32,7 +32,7 @@ function MainApp() {
             {shouldShowNavbar && <Navbar />}
             <Routes>
                 <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
+                <Route path="/" element={<Register />} />
                 {/* Protect Dashboard route */}
                 <Route 
                     path="/dashboard" 
